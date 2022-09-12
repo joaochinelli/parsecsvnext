@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Csv {
+  id    Int     @id @default(autoincrement())
+  identificadorURL String? 
+  nome  String?
+  categorias  String?
+  preco  String?
+  precoPromocional  String?
+  peso  String?
+  altura  String?
+  largura  String?
+  comprimento  String?
+  estoque  String?
+  SKU  String?
+  codigoDeBarras  String?
+  exibirNaLoja  String?
+  freteGratis  String?
+  descricao  String?
+  tags  String?
+  tituloParaSEO  String?
+  descricaoParaSEO  String?
+  marca  String?
+  produtoFisico  String?
+  MPN  String?
+  sexo  String?
+  faixaEtaria  String?
+}
